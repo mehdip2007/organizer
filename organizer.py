@@ -32,6 +32,8 @@ loop thru every items in the directory to get the file type for organizing
 1. use OS library(scandir) 
 '''
 def organizeDirectory():
+    path_dir = input('Please Enter The Desired Path: ').  ### you may put your desire path for Orginizing
+    os.chdir(path_dir)
     for item in os.scandir():  ### loop thru every items in the current working directory using the os library
         if item.is_dir():
             continue
